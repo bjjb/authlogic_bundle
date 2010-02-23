@@ -1,5 +1,6 @@
 def sudo?
-  !!(ENV['SUDO'] ||= yes?("Install gems as root?"))
+  ENV['SUDO'] ||= 'YES' if yes?("Install gems as root?")
+  ENV['SUDO'] == 'YES'
 end
 
 def git?
