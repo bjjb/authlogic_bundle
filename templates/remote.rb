@@ -1,4 +1,5 @@
 REPOSITORY = template.sub(%r{^\w+//}, '').sub(%r{(/raw/master)?/templates/remote.rb}, '')
+puts "Using repository: #{REPOSITORY}"
 
 ENV['SCM'] = 'git' if yes?('Use git as scm? (y/n)')
 
