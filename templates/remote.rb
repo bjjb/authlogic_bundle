@@ -1,4 +1,4 @@
-REMOTE_PATH = "github.com/tsechingho/authlogic_bundle"
+REMOTE_PATH = "github.com/jjbuckley/authlogic_bundle"
 REMOTE_SOURCE = "http://#{REMOTE_PATH}/raw/master"
 
 ENV['SCM'] = 'git' if yes?('Use git as scm? (y/n)')
