@@ -1,3 +1,7 @@
+def sudo?
+  !!(ENV['SUDO'] ||= yes?("Install gems as root?"))
+end
+
 def git?
   ENV['SCM'] == 'git'
 end

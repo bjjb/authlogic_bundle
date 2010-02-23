@@ -5,6 +5,7 @@ git :init
 
 file '.gitignore', <<-CODE
 .DS_Store
+**/.*.sw?
 ._*
 Icon?
 config/database.yml

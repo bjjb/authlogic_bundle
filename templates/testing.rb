@@ -17,7 +17,7 @@ gem 'shoulda', :lib => false, :version => '>=2.10.3',
 gem 'factory_girl', :lib => false, :version => '>=1.2.3',
   :source => 'http://gemcutter.org', :env => 'test' # thoughtbot
 
-rake 'gems:install', :sudo => true, :env => 'test'
+rake 'gems:install', :sudo => sudo?, :env => 'test'
 
 generate :rspec
 
@@ -47,7 +47,7 @@ gem 'email_spec', :lib => 'email_spec', :version => '>=0.4.0',
   :source => 'http://gemcutter.org', :env => 'test' # bmabey
 
 # we still need 'test' environment to install cucumber related gems
-rake 'gems:install', :sudo => true, :env => 'test'
+rake 'gems:install', :sudo => sudo?, :env => 'test'
 
 generate :cucumber
 
@@ -82,7 +82,7 @@ gem 'ZenTest', :lib => 'autotest', :version => '>=4.2.1', :env => 'test'
 gem 'autotest-notification', :lib => 'autotest_notification', :version => '>=2.1.0',
   :source => 'http://gemcutter.org', :env => 'test' # carlosbrando
 
-rake 'gems:install', :sudo => true, :env => 'test'
+rake 'gems:install', :sudo => sudo?, :env => 'test'
 
 file 'spec/rcov.opts', <<-CODE
 --exclude "spec/*,gems/*,features/*"
